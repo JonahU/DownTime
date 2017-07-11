@@ -17,6 +17,9 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="cOH-0P-GcD" customClass="StatusMenuController" customModule="MenuWidget" customModuleProvider="target">
             <connections>
+                <outlet property="prefQuitView" destination="Ica-rA-lP6" id="cPz-ok-eqW"/>
+                <outlet property="quitButton" destination="QU1-wO-RX7" id="yCZ-wD-m88"/>
+                <outlet property="settingsButton" destination="bMb-Vr-mgH" id="uKX-Ry-6LX"/>
                 <outlet property="statusMenu" destination="V5j-ZA-BEU" id="XbQ-xH-o5p"/>
                 <outlet property="usageScrollView" destination="Wq3-bP-Br2" id="Jah-PS-Ya7"/>
                 <outlet property="usageView" destination="zec-Ol-4MZ" id="3sU-ZC-x1M"/>
@@ -27,30 +30,19 @@
                 <menuItem title="ScrollView" id="LnB-xD-qqf" userLabel="ScrollView">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="gYd-Lh-biK"/>
-                <menuItem title="Preferences..." id="wxf-jl-YTP" userLabel="Preferences...">
+                <menuItem title="Pref/Quit Bar" id="h3l-St-PkR" userLabel="Pref/Quit Bar">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="preferencesClicked:" target="cOH-0P-GcD" id="d1Q-tt-2gg"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="N5H-Dq-8VU"/>
-                <menuItem title="Quit DownTime" id="5gP-7X-IFy" userLabel="Quit DownTime">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="quitClicked:" target="cOH-0P-GcD" id="d7r-ZD-ZMC"/>
-                    </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="132" y="150.5"/>
+            <point key="canvasLocation" x="217" y="173"/>
         </menu>
         <customView id="zec-Ol-4MZ" customClass="UsageView" customModule="MenuWidget" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-            <point key="canvasLocation" x="278" y="352"/>
+            <point key="canvasLocation" x="266" y="625"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="fMD-2P-eA5"/>
-        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Wq3-bP-Br2" userLabel="Usage Scroll View" customClass="UsageScrollView" customModule="MenuWidget" customModuleProvider="target">
+        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" id="Wq3-bP-Br2" userLabel="Usage Scroll View" customClass="UsageScrollView" customModule="MenuWidget" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <clipView key="contentView" copiesOnScroll="NO" id="L1l-Jb-4Uc" customClass="ScrollClipView" customModule="MenuWidget" customModuleProvider="target">
@@ -58,20 +50,52 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rah-AI-KTM">
-                        <rect key="frame" x="0.0" y="0.0" width="225" height="15"/>
+                        <rect key="frame" x="0.0" y="0.0" width="215" height="15"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </view>
                 </subviews>
             </clipView>
-            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="WMx-gL-k5x">
-                <rect key="frame" x="1" y="183" width="248" height="16"/>
+            <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="WMx-gL-k5x" customClass="ScrollerView" customModule="MenuWidget" customModuleProvider="target">
+                <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
-            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9jW-AS-4Ha">
-                <rect key="frame" x="233" y="1" width="16" height="198"/>
+            <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9jW-AS-4Ha" customClass="ScrollerView" customModule="MenuWidget" customModuleProvider="target">
+                <rect key="frame" x="-100" y="-100" width="15" height="198"/>
                 <autoresizingMask key="autoresizingMask"/>
             </scroller>
             <point key="canvasLocation" x="-117.5" y="625"/>
         </scrollView>
+        <customView id="Ica-rA-lP6">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QU1-wO-RX7">
+                    <rect key="frame" x="14" y="-1" width="184" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="recessed" title="Quit DownTime" bezelStyle="recessed" alignment="left" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p7S-Jh-aEB">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menuBar"/>
+                        <connections>
+                            <action selector="quitWasClicked:" target="cOH-0P-GcD" id="RtP-B7-uQz"/>
+                        </connections>
+                    </buttonCell>
+                </button>
+                <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-Vr-mgH">
+                    <rect key="frame" x="206" y="-1" width="30" height="19"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="recessed" bezelStyle="recessed" image="NSActionTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cM5-en-6ox">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="systemBold" size="12"/>
+                        <connections>
+                            <action selector="preferencesWasClicked:" target="cOH-0P-GcD" id="K6n-4h-xEU"/>
+                        </connections>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="-125" y="219"/>
+        </customView>
     </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+    </resources>
 </document>

@@ -21,14 +21,14 @@ class UsageScrollView: NSScrollView {
         self.borderType = NSBorderType.noBorder
         self.hasVerticalScroller = true
         self.hasHorizontalScroller = false
-        self.verticalScroller?.alphaValue = 0.0
+        self.verticalScroller?.alphaValue = 1.0
         self.drawsBackground = false
         self.verticalScrollElasticity = .none //can lead to some weird animations when scrolling fast if enabled
         self.horizontalScrollElasticity = .none
         self.automaticallyAdjustsContentInsets = false
         self.contentInsets = NSEdgeInsetsMake(0, 0, 1, 0) //top, left, bottom, right
         
-        //self.addBottomBorder() disabled for now
+        self.addBottomBorder() //disabled for now
     }
     
     func addBottomBorder(){
@@ -47,7 +47,7 @@ class UsageScrollView: NSScrollView {
         DispatchQueue.main.async {
             super.setFrameSize(newSize)
         }
-        NSLog("frame set: \(newSize)")
+        //NSLog("frame set: \(newSize)")
     }
     
     func updateFrameHeight(_ newHeight: Int){
@@ -55,6 +55,11 @@ class UsageScrollView: NSScrollView {
 
         size.height = CGFloat(newHeight)
         self.setFrameSize(size)
+    }
+    
+    override func tile() {
+        super.tile()
+        self.contentView.setFrameSize(self.bounds.size)
     }
     
 }

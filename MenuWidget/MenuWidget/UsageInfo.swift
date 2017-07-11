@@ -76,7 +76,7 @@ class UsageInfo {
             for i in 0 ..< arraySize{
                 recentData.append(results[results.count - 1 - i])
             }
-            print("\(results.count) records")
+            //print("\(results.count) records")
             defaults.set(results.count, forKey:"DataRecordsCount")
             return recentData
         }catch{

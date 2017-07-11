@@ -20,5 +20,8 @@ class ScrollClipView: NSClipView {
 
     override func viewFrameChanged(_ notification: Notification) {
         super.viewFrameChanged(notification)
+        //NSLog("doc \(self.documentView?.frame.size)")
+        //NSLog("doc v \(self.documentVisibleRect.size)")
+
     }
 }

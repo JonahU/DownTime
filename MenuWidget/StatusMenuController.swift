@@ -13,8 +13,12 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     @IBOutlet weak var usageView: UsageView!
     @IBOutlet weak var usageScrollView: UsageScrollView!
+    @IBOutlet weak var prefQuitView: NSView!
+    @IBOutlet weak var quitButton: NSButton!
+    @IBOutlet weak var settingsButton: NSButton!
     
     var scrollViewMenuItem: NSMenuItem!
+    var prefQuitMenuItem: NSMenuItem!
     var preferencesWindow: PreferencesWindow!
     
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
@@ -22,16 +26,21 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     let usageInfo = UsageInfo()
     
     override func awakeFromNib() {
-        //load menu icon + main menu
+        //load menu icon
         let icon = NSImage(named: "statusIcon")
         icon?.isTemplate = true //best for darkmode
         statusItem.image = icon
         statusItem.menu = statusMenu
         
+        //load bottom bar
+        prefQuitMenuItem = statusMenu.item(withTitle: "Pref/Quit Bar")
+        prefQuitMenuItem.view = prefQuitView
+        
         if defaults.bool(forKey: "HasBeenOpenedBefore") == false {
             firstTimeSetup()
         }
         
+        //load main view
         load()
     }
     
@@ -83,6 +92,8 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         defaults.set(true, forKey: "HasBeenOpenedBefore")
     }
     
+    @IBOutlet weak var popover: NSPopover!
+    
     func loadView() {        
         scrollViewMenuItem = statusMenu.item(withTitle: "ScrollView")
         scrollViewMenuItem.view = usageScrollView
@@ -101,7 +112,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             filter = 15 //default value
         }
         
-        usageInfo.fetchRecentData(100) {recentData in //changed filter-> 100 FIX ME
+        usageInfo.fetchRecentData(200) {recentData in //max display values currently 200
             self.usageView.update(recentData, displayLimit: filter)
         }
 
@@ -135,19 +146,20 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     func sleepNotification(aNotification : NSNotification) {
         usageInfo.toggleDownTime(aNotification)
-        NSLog("Sleep...")//FOR TESTING PURPOSES ONLY
+        //NSLog("Sleep...")//FOR TESTING PURPOSES ONLY
         
     }
     
     func wakeNotification(aNotification : NSNotification) {
         usageInfo.toggleDownTime(aNotification)
-        NSLog("...Wake")//FOR TESTING PURPOSES ONLY
+        //NSLog("...Wake")//FOR TESTING PURPOSES ONLY
         updateView()
     }
     
     //updates UI to display correct "today", "yesterday", "# days ago" labels
     func dayChange(aNotification : NSNotification){
         if aNotification.name == NSNotification.Name.NSCalendarDayChanged{
+            NSLog("dayDidChange!")
             updateView()
         }
     }
@@ -158,14 +170,14 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         updateView()
     }
     
-    @IBAction func preferencesClicked(_ sender: Any) {
-        preferencesWindow.showWindow(nil)
-    }
-    
-    @IBAction func quitClicked(_ sender: NSMenuItem){
+    @IBAction func quitWasClicked(_ sender: Any) {
         NSWorkspace.shared().notificationCenter.removeObserver(self) //release memory
         NSApplication.shared().terminate(self)
     }
     
+    @IBAction func preferencesWasClicked(_ sender: Any) {
+        statusMenu.cancelTrackingWithoutAnimation()
+        preferencesWindow.showWindow(nil)
+    }
 }
 

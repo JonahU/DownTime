@@ -261,7 +261,7 @@ class UsageView: NSView {
     func postNotifcation(_ size: NSSize){
         let defaults = UserDefaults.standard
         let height : Int = Int(size.height)
-        NSLog("height \(size.height)")
+        //NSLog("height notification \(size.height)")
         defaults.set(height, forKey: "ScrollHeight")
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "mainSizeDidCalculate"), object: nil)
     }

@@ -12,6 +12,7 @@
 		223673901EE5DA430038D88D /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2236738E1EE5DA430038D88D /* PreferencesWindow.xib */; };
 		225272DA1EF02DA7002B13EF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225272D91EF02DA7002B13EF /* CoreDataStack.swift */; };
 		22657C281EE60DC20072C3AF /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657C271EE60DC20072C3AF /* UsageView.swift */; };
+		2268FAED1F13C6830044A72F /* ScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268FAEC1F13C6830044A72F /* ScrollerView.swift */; };
 		227B6E7A1EE6EABF0037FC22 /* UsageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B6E791EE6EABF0037FC22 /* UsageInfo.swift */; };
 		22803E1F1EE39C6400164043 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22803E1E1EE39C6400164043 /* StatusMenuController.swift */; };
 		22D5310D1EFD5AD100856DA2 /* UsageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5310C1EFD5AD100856DA2 /* UsageScrollView.swift */; };
@@ -56,6 +57,7 @@
 		2236738E1EE5DA430038D88D /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
 		225272D91EF02DA7002B13EF /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		22657C271EE60DC20072C3AF /* UsageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
+		2268FAEC1F13C6830044A72F /* ScrollerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollerView.swift; sourceTree = "<group>"; };
 		227B6E791EE6EABF0037FC22 /* UsageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageInfo.swift; sourceTree = "<group>"; };
 		22803E1E1EE39C6400164043 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMenuController.swift; path = ../StatusMenuController.swift; sourceTree = "<group>"; };
 		22AD0B1E1EFA0C3700700227 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -142,6 +144,7 @@
 				227B6E791EE6EABF0037FC22 /* UsageInfo.swift */,
 				22D5310C1EFD5AD100856DA2 /* UsageScrollView.swift */,
 				22D5310F1EFD7D1700856DA2 /* ScrollClipView.swift */,
+				2268FAEC1F13C6830044A72F /* ScrollerView.swift */,
 			);
 			path = MenuWidget;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				225272DA1EF02DA7002B13EF /* CoreDataStack.swift in Sources */,
 				227B6E7A1EE6EABF0037FC22 /* UsageInfo.swift in Sources */,
 				22EAA5571EEF910A00E0F5E6 /* DownTimeModel.xcdatamodeld in Sources */,
+				2268FAED1F13C6830044A72F /* ScrollerView.swift in Sources */,
 				22DC6C801EF0464E00C26D58 /* UsageData+CoreDataClass.swift in Sources */,
 				22149EA71EF9D6AC000071AC /* Date+Interval.swift in Sources */,
 				22FCA0531EE3750800ADA986 /* AppDelegate.swift in Sources */,

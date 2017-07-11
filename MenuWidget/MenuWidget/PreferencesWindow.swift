@@ -35,7 +35,9 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
 
         self.window?.center()
         self.window?.makeKeyAndOrderFront(nil)
+        self.window?.level = Int(CGWindowLevelForKey(.maximumWindow))
         NSApp.activate(ignoringOtherApps: true)
+        
         
         //load outlets
         loadLaunchPref()
@@ -87,20 +89,26 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
     }
     
     @IBAction func resetDataButtonClicked(_ sender: NSButton) {
-        if friendlyWarning(){
-            delegate?.deleteAllData()
-            resetDataButton.isEnabled = false
-        }
+        friendlyWarning(completion: {answer in
+            if answer == true{
+                self.delegate?.deleteAllData()
+                self.resetDataButton.isEnabled = false
+            }
+
+        })
     }
     
-    func friendlyWarning() -> Bool {
+    func friendlyWarning(completion: @escaping (Bool) -> () ) {
         let alert = NSAlert()
         alert.messageText = "Warning"
         alert.informativeText = "This change is permanent"
         alert.alertStyle = NSAlertStyle.warning
         alert.addButton(withTitle: "OK")
         alert.addButton(withTitle: "Cancel")
-        return alert.runModal() == NSAlertFirstButtonReturn
+        
+        alert.beginSheetModal(for: self.window!, completionHandler: { result in
+            completion(result == NSAlertFirstButtonReturn)
+        })
     }
     
     @IBAction func howManyValuesPopUpClicked(_ sender: NSPopUpButton) {
