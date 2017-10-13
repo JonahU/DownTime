@@ -34,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             var components = path.pathComponents
             components.removeLast(3)
             components.append("MacOS")
-            components.append("MenuWidget") //MAIN APP NAME, CHANGE WITH FUNCTION CHANGE
+            components.append("DownTime") //MAIN APP NAME, change depending on release ver or internal ver, release name:DownTime, internal name:MenuWidget
             
             let newPath = NSString.path(withComponents: components)
             
