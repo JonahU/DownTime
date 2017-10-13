@@ -11,7 +11,7 @@ import Cocoa
 class ScrollClipView: NSClipView {
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)        
     }
     
     public final override var isFlipped: Bool{

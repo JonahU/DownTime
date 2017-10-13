@@ -15,7 +15,7 @@ public class UsageData: NSManagedObject {
         timeInterval = endTime!.timeIntervalSince(startTime!)
     }
     
-    func getDescription(format : Bool) -> (String, String) {
+    func getDescription(format24hr : Bool) -> (String, String) {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .abbreviated
         formatter.allowedUnits = [.day,.hour,.minute,.second]
@@ -25,7 +25,7 @@ public class UsageData: NSManagedObject {
         var formattedStartTime : String
         var formattedEndTime : String
         
-        if format{ //24-HR clock
+        if format24hr{ //24-HR clock
             dateFormatter.dateFormat = "HH:mm"
             formattedStartTime = dateFormatter.string(from: startTime!)
             formattedEndTime = dateFormatter.string(from: endTime!)

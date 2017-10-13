@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="UsageData" representedClassName="UsageData" syncable="YES">
+        <attribute name="dataType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="isPowerOffData" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="timeInterval" optional="YES" attributeType="Double" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UsageData" positionX="-36" positionY="9" width="128" height="90"/>
+        <element name="UsageData" positionX="-36" positionY="9" width="128" height="120"/>
     </elements>
 </model>

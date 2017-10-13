@@ -2,17 +2,16 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "statusIcon1x.png",
+      "filename" : "noDataImage1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "statusIcon2x.png",
+      "filename" : "noDataImage2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "statusIcon3x.png",
       "scale" : "3x"
     }
   ],

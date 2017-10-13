@@ -19,5 +19,9 @@ extension UsageData {
     @NSManaged public var endTime: Date?
     @NSManaged public var startTime: Date?
     @NSManaged public var timeInterval: TimeInterval
-
+    @NSManaged public var isPowerOffData: Bool
+    @NSManaged public var dataType: String
+    
 }
+
+

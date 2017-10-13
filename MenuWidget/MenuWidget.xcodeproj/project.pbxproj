@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		22149EA71EF9D6AC000071AC /* Date+Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22149EA61EF9D6AC000071AC /* Date+Interval.swift */; };
+		2231EEA11F2270DF00736677 /* SendEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231EEA01F2270DF00736677 /* SendEmail.swift */; };
 		2236738F1EE5DA430038D88D /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236738D1EE5DA430038D88D /* PreferencesWindow.swift */; };
 		223673901EE5DA430038D88D /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2236738E1EE5DA430038D88D /* PreferencesWindow.xib */; };
+		2246620B1F2E96F2000AC786 /* Image+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246620A1F2E96F2000AC786 /* Image+Tint.swift */; };
 		225272DA1EF02DA7002B13EF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225272D91EF02DA7002B13EF /* CoreDataStack.swift */; };
 		22657C281EE60DC20072C3AF /* UsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22657C271EE60DC20072C3AF /* UsageView.swift */; };
 		2268FAED1F13C6830044A72F /* ScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2268FAEC1F13C6830044A72F /* ScrollerView.swift */; };
 		227B6E7A1EE6EABF0037FC22 /* UsageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B6E791EE6EABF0037FC22 /* UsageInfo.swift */; };
 		22803E1F1EE39C6400164043 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22803E1E1EE39C6400164043 /* StatusMenuController.swift */; };
+		22CCA6201F17FDAD0079B46E /* TopDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CCA61F1F17FDAD0079B46E /* TopDataView.swift */; };
+		22CCA6241F1852B40079B46E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22CCA6221F18525A0079B46E /* Foundation.framework */; };
 		22D5310D1EFD5AD100856DA2 /* UsageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5310C1EFD5AD100856DA2 /* UsageScrollView.swift */; };
 		22D531101EFD7D1700856DA2 /* ScrollClipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D5310F1EFD7D1700856DA2 /* ScrollClipView.swift */; };
 		22DC6C7C1EF0452C00C26D58 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22DC6C7B1EF0452C00C26D58 /* CoreData.framework */; };
@@ -53,14 +57,18 @@
 
 /* Begin PBXFileReference section */
 		22149EA61EF9D6AC000071AC /* Date+Interval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Interval.swift"; sourceTree = "<group>"; };
+		2231EEA01F2270DF00736677 /* SendEmail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendEmail.swift; sourceTree = "<group>"; };
 		2236738D1EE5DA430038D88D /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 		2236738E1EE5DA430038D88D /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
+		2246620A1F2E96F2000AC786 /* Image+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+Tint.swift"; sourceTree = "<group>"; };
 		225272D91EF02DA7002B13EF /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		22657C271EE60DC20072C3AF /* UsageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageView.swift; sourceTree = "<group>"; };
 		2268FAEC1F13C6830044A72F /* ScrollerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollerView.swift; sourceTree = "<group>"; };
 		227B6E791EE6EABF0037FC22 /* UsageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageInfo.swift; sourceTree = "<group>"; };
 		22803E1E1EE39C6400164043 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusMenuController.swift; path = ../StatusMenuController.swift; sourceTree = "<group>"; };
 		22AD0B1E1EFA0C3700700227 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		22CCA61F1F17FDAD0079B46E /* TopDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopDataView.swift; sourceTree = "<group>"; };
+		22CCA6221F18525A0079B46E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22D5310C1EFD5AD100856DA2 /* UsageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageScrollView.swift; sourceTree = "<group>"; };
 		22D5310F1EFD7D1700856DA2 /* ScrollClipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollClipView.swift; sourceTree = "<group>"; };
 		22DC6C7B1EF0452C00C26D58 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -82,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22CCA6241F1852B40079B46E /* Foundation.framework in Frameworks */,
 				22DC6C7C1EF0452C00C26D58 /* CoreData.framework in Frameworks */,
 				22FCA08F1EE377EC00ADA986 /* ServiceManagement.framework in Frameworks */,
 			);
@@ -94,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				22149EA61EF9D6AC000071AC /* Date+Interval.swift */,
+				2246620A1F2E96F2000AC786 /* Image+Tint.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -145,6 +155,8 @@
 				22D5310C1EFD5AD100856DA2 /* UsageScrollView.swift */,
 				22D5310F1EFD7D1700856DA2 /* ScrollClipView.swift */,
 				2268FAEC1F13C6830044A72F /* ScrollerView.swift */,
+				22CCA61F1F17FDAD0079B46E /* TopDataView.swift */,
+				2231EEA01F2270DF00736677 /* SendEmail.swift */,
 			);
 			path = MenuWidget;
 			sourceTree = "<group>";
@@ -160,6 +172,7 @@
 		22FCA08D1EE377EC00ADA986 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22CCA6221F18525A0079B46E /* Foundation.framework */,
 				22AD0B1E1EFA0C3700700227 /* QuartzCore.framework */,
 				22DC6C7B1EF0452C00C26D58 /* CoreData.framework */,
 				22FCA08E1EE377EC00ADA986 /* ServiceManagement.framework */,
@@ -262,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2231EEA11F2270DF00736677 /* SendEmail.swift in Sources */,
 				22803E1F1EE39C6400164043 /* StatusMenuController.swift in Sources */,
 				2236738F1EE5DA430038D88D /* PreferencesWindow.swift in Sources */,
 				22DC6C811EF0464E00C26D58 /* UsageData+CoreDataProperties.swift in Sources */,
@@ -269,9 +283,11 @@
 				22D5310D1EFD5AD100856DA2 /* UsageScrollView.swift in Sources */,
 				225272DA1EF02DA7002B13EF /* CoreDataStack.swift in Sources */,
 				227B6E7A1EE6EABF0037FC22 /* UsageInfo.swift in Sources */,
+				2246620B1F2E96F2000AC786 /* Image+Tint.swift in Sources */,
 				22EAA5571EEF910A00E0F5E6 /* DownTimeModel.xcdatamodeld in Sources */,
 				2268FAED1F13C6830044A72F /* ScrollerView.swift in Sources */,
 				22DC6C801EF0464E00C26D58 /* UsageData+CoreDataClass.swift in Sources */,
+				22CCA6201F17FDAD0079B46E /* TopDataView.swift in Sources */,
 				22149EA71EF9D6AC000071AC /* Date+Interval.swift in Sources */,
 				22FCA0531EE3750800ADA986 /* AppDelegate.swift in Sources */,
 				22D531101EFD7D1700856DA2 /* ScrollClipView.swift in Sources */,
@@ -409,7 +425,7 @@
 				INFOPLIST_FILE = MenuWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonahu.MenuWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DownTime;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

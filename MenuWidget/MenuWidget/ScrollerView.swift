@@ -11,11 +11,15 @@ import Cocoa
 class ScrollerView: NSScroller {
 
     override func draw(_ dirtyRect: NSRect) {
+        NSColor.clear.set()
+        NSRectFill(dirtyRect)
         self.drawKnob()
+        //fixes issue with legacy/unsupported mice forcing scroller to draw
 
     }
     
     override func drawKnob() {
-        //DO NOTHING
+        self.knobProportion = 0.2
+        super.drawKnob()
     }
 }
